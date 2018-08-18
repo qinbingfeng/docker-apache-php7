@@ -33,7 +33,7 @@ RUN cd /tmp \
     && tar -xvvzf ioncube.tar.gz \
     && mv ioncube/ioncube_loader_lin_7.0.so /usr/lib/php/20151012/ \
     && rm -Rf ioncube.tar.gz ioncube \
-    && echo "zend_extension=/usr/lib/php/20151012/ioncube_loader_lin_7.0.so" > /etc/php/7.0/cli/php.ini
+    && echo "zend_extension=/usr/lib/php/20151012/ioncube_loader_lin_7.0.so" > /etc/php/7.0/apache2/php.ini
 
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
