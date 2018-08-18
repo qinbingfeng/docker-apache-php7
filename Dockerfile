@@ -27,7 +27,8 @@ RUN apt-get update && \
       php7.0-mcrypt \
       php7.0-curl \
       curl \
-      composer
+      composer \
+      ffmpeg
       
 RUN cd /tmp \
 	&& curl -o ioncube.tar.gz http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz \
