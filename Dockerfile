@@ -31,9 +31,9 @@ RUN apt-get update && \
 RUN cd /tmp \
 	&& curl -o ioncube.tar.gz http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz \
     && tar -xvvzf ioncube.tar.gz \
-    && mv ioncube/ioncube_loader_lin_7.0.so /usr/lib/php/20151012/* \
+    && mv ioncube/ioncube_loader_lin_7.0.so /usr/lib/php/20151012/ \
     && rm -Rf ioncube.tar.gz ioncube \
-    && echo "zend_extension=/usr/lib/php/20151012/ioncube_loader_lin_7.0.so" > /etc/php/7.0/cli/php.inirewrite
+    && echo "zend_extension=/usr/lib/php/20151012/ioncube_loader_lin_7.0.so" > /etc/php/7.0/cli/php.ini
 
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
