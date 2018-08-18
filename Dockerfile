@@ -25,6 +25,7 @@ RUN apt-get update && \
       php7.0-soap \
       php7.0-opcache \
       php7.0-mcrypt \
+      php7.0-curl \
       curl \
       composer
       
